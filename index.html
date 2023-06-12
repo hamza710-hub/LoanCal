@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Loan Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body >
+<div class="overlay"></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card card-body text-center mt-5 ">
+      <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+      <form id="loan-form">
+        <div class="input-group">
+          <span class="input-group-addon" style="padding: 0.2rem; border: cadetblue solid 0.5px; border-radius: 3px; width: 40px;">$</span>
+          <input type="number" id="amount" class="form-control" placeholder="Amount">
+        </div><br>
+        <div class="input-group">
+          <span class="input-group-addon" style="padding: 0.2rem; border: cadetblue solid 0.5px; border-radius: 3px; width: 40px ;">%`</span>
+          <input type="number" id="interest" class="form-control" placeholder="interest">
+        </div><br>
+        <input type="number" class="form-control" id="years" placeholder="Years to Repay"><br>
+        <div class="form-group">
+          <input type="submit" class="btn btn-dark btn-block" value="Calculate">
+        </div>
+      </form>
+      <!--LOADER-->
+      <div id ="loading">
+        <img src="img/loading-better.gif" alt="ni image found" height="100px" width="100px">
+      </div>
+      <!--RESULTS-->
+      <div id="results" class="pt-4">
+        <h5>Results</h5>
+        <div class="form-group">
+          <div class="input-group">
+          <span class="input-group-addon" style="padding: 0.2rem;  border: cadetblue solid 0.5px; border-radius: 3px; width: 150px; text-align: center;">Monthly Payment</span>
+          <input type="number" id="monthly-payment" class="form-control" disabled>
+        </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+          <span class="input-group-addon" style="padding: 0.2rem;  border: cadetblue solid 0.5px; border-radius: 3px; width: 130px;">Total Payment</span>
+          <input type="number" id="total-payment" class="form-control" disabled>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+          <span class="form-group-addon" style="padding: 0.2rem;  border: cadetblue solid 0.5px; border-radius: 3px; width: 110px ;">Total Interest</span>
+          <input type="number" id="total-interest" class="form-control" disabled>
+        </div>
+        </div>
+      </div>
+      
+      </div>
+      </div>
+    </div>
+</div>
+
+
+
+<!--Javascript Files-->
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
